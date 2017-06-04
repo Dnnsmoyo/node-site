@@ -1,0 +1,15 @@
+{
+  "name": "rj",
+  "version": "0.0.0",
+  "description": "sample ecommerce site with reactjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+	+   "start": "babel-node index.js --presets es2015,stage-2"
+  },
+  "keywords": [
+    "ecommerce"
+  ],
+  "author": "dennis moyo",
+  "license": "ISC"
+}

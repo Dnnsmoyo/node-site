@@ -1,0 +1,51 @@
+<head>
+<script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  <script src="https://npmcdn.com/react-router@2.4.0/umd/ReactRouter.min.js"></script>
+  <style>
+  a{
+  padding:20px;
+  font-size:25px;
+  text-decoration:none;
+  }
+
+  </style>
+  </head>
+<div id ="lol"></div>
+<div id ="content"></div>
+
+ <script type="text/babel">
+class App extends React.Component {
+render(){
+return(
+<div className = "text-center">
+<img src = "http://freevector.co/wp-content/uploads/2011/05/74577-user-group.png" width="90"height="90"/>
+<h1>Welcome</h1>
+</div>
+);
+}
+}
+ReactDOM.render(
+<App/>,
+document.getElementById('lol'));
+class Content extends React.Component {
+render(){
+return(
+<div className = "text-center">
+<a href="/#">Home</a>
+<a href="/about.ejs">About</a>
+<a href="/docs.ejs">Docs</a>
+<a href="/account.ejs">Account</a>
+<a href = "/stats.ejs">Stats</a>
+<a href="/login.ejs">Login/SignUp</a>
+</div>
+);
+}
+}
+ReactDOM.render(
+<Content/>,
+document.getElementById('content'));
+
+ </script>
+ 

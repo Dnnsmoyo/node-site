@@ -1,0 +1,104 @@
+<head>
+<script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  <script src="https://npmcdn.com/react-router@2.4.0/umd/ReactRouter.min.js"></script>
+  <style>
+  a{
+  padding:20px;
+  font-size:25px;
+  text-decoration:none;
+  }
+#one:hover{
+color:white;
+}
+#two:hover{
+color:white;
+}
+#three:hover{
+color:white;
+}
+#four:hover{
+color:white;
+}
+#five:hover{
+color:white;
+}
+  </style>
+  </head>
+<div id ="lol"></div>
+<div id ="content"></div>
+
+ <script type="text/babel">
+class App extends React.Component {
+render(){
+return(
+<div className = "text-center">
+<img src = "http://freevector.co/wp-content/uploads/2011/05/74577-user-group.png" width="90"height="90"/>
+<h1>Welcome</h1>
+</div>
+);
+}
+}
+ReactDOM.render(
+<App/>,
+document.getElementById('lol'));
+class Content extends React.Component {
+render(){
+return(
+<div className = "text-center">
+<a id="one"href="/#">Home</a>
+<a id="two"href="/about">About</a>
+<a id="three"href="/docs">Docs</a>
+<a id="four"href="/login">Login/SignUp</a>
+<a id="five"href="/profile">Profile</a>
+</div>
+);
+}
+}
+ReactDOM.render(
+<Content/>,
+document.getElementById('content'));
+
+ </script>
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+	<style>
+		body{ 
+		background-image:url('http://www.3d-wallpapers.info/wp-content/uploads/fantasy-nature-wallpaper-3d-600x375.jpg');
+		background-size:cover;}
+		a{text-decoration:none;}
+	</style>
+</head>
+<body>
+<div class="container">
+
+<div class="col-sm-6 col-sm-offset-3">
+
+	<h1><span class="fa fa-sign-in"></span> Signup</h1>
+
+
+	<!-- LOGIN FORM -->
+	<form action="/signup" method="post">
+		<div class="form-group">
+			<label>Username</label>
+			<input type="text" class="form-control" name="username">
+		</div>
+		<div class="form-group">
+			<label>Password</label>
+			<input type="password" class="form-control" name="password">
+		</div>
+
+		<button type="submit" class="btn btn-warning btn-lg">Signup</button>
+	</form>
+
+	<hr>
+
+	<p>Already have an account? <a href="/login">Login</a></p>
+	<p>Or go <a href="/">home</a>.</p>
+
+</div>
+
+</div>
+</body>
+</html>

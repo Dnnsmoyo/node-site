@@ -1,0 +1,107 @@
+<head>
+<script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  <script src="https://npmcdn.com/react-router@2.4.0/umd/ReactRouter.min.js"></script>
+  <style>
+  a{
+  color:black;
+  padding:20px;
+  font-size:25px;
+  
+  }
+#one:hover{
+color:white;
+text-decoration:none;
+}
+#two:hover{
+color:white;
+text-decoration:none;
+}
+#three:hover{
+color:white;
+text-decoration:none;
+}
+#four:hover{
+color:white;
+text-decoration:none;
+}
+#five:hover{
+color:white;
+text-decoration:none;
+}
+body{background-image:url('http://www.planwallpaper.com/static/images/fresh-green-background.jpg');
+background-size:cover;}
+  </style>
+  </head>
+<div id ="lol"></div>
+<div id ="content"></div>
+
+ <script type="text/babel">
+class App extends React.Component {
+render(){
+return(
+<div className = "text-center">
+<img src = "http://freevector.co/wp-content/uploads/2011/05/74577-user-group.png" width="90"height="90"/>
+<h1>Account</h1>
+</div>
+);
+}
+}
+ReactDOM.render(
+<App/>,
+document.getElementById('lol'));
+class Content extends React.Component {
+render(){
+return(
+<div className = "text-center">
+<a id="one"href="/#">Home</a>
+<a id="two"href="/about">About</a>
+<a id="three"href="/docs">Docs</a>
+<a id="four"href="/login">Login/SignUp</a>
+<a id="five"href="/profile">Profile</a>
+</div>
+);
+}
+}
+ReactDOM.render(
+<Content/>,
+document.getElementById('content'));
+
+ </script>
+
+<html>
+<head>
+	<title>User Profile</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">
+
+	<div class="page-header text-center">
+		<h1><span class="fa fa-user"></span> Profile Page</h1>
+		<a href="/logout" class="btn btn-default btn-sm">Logout</a>
+	</div>
+
+	<div class="row">
+
+		<!-- LOCAL INFORMATION -->
+		<div class="col-sm-6">
+			<div class="well">
+				<h3><span class="fa fa-user"></span>You</h3>
+
+					<p>
+						<strong>id</strong>: <%= user.id %><br>
+						<strong>username</strong>: <%= user.username %><br>
+						<strong>password</strong>: <%= user.password %>
+					</p>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+</body>
+</html>
